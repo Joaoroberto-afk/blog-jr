@@ -1,0 +1,247 @@
+CONFIGURAÇÕES GERAIS
+---------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #183c63;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ---------------------------
+   CABEÇALHO
+---------------------------- */
+
+header {
+    background-color: #1b426b;
+    color: white;
+    text-align: center;
+
+    padding: 38px 20px 30px;
+
+    width: 100%;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* ---------------------------
+   CONTAINER DOS POSTS
+---------------------------- */
+
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 32px;
+
+    padding: 32px 4px;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ---------------------------
+   CARD DO POST
+---------------------------- */
+
+.post {
+    background-color: #ffffff;
+
+    border: 1px solid #34495e;
+
+    min-height: 440px;
+
+    padding: 28px 18px 16px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------------------------
+   IMAGEM
+---------------------------- */
+
+.post-img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------------------------
+   TÍTULO
+---------------------------- */
+
+.post h2 {
+    color: #183c63;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------------------------
+   AUTOR
+---------------------------- */
+
+.post h3 {
+    color: #183c63;
+
+    font-size: 16px;
+
+    margin-bottom: 16px;
+}
+
+
+/* ---------------------------
+   TEXTO
+---------------------------- */
+
+.post p {
+    color: #34495e;
+
+    font-size: 16px;
+
+    line-height: 1.25;
+
+    margin-bottom: 16px;
+}
+
+
+/* ---------------------------
+   FONTE
+---------------------------- */
+
+.post .fonte {
+    margin-top: auto;
+
+    margin-bottom: 12px;
+
+    color: #34495e;
+
+    font-size: 15px;
+}
+
+
+/* ---------------------------
+   BOTÕES
+---------------------------- */
+
+.reacoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 5px;
+}
+
+.reacoes button {
+    background-color: #f5f5f5;
+
+    border: 1px solid #999;
+
+    border-radius: 2px;
+
+    padding: 3px 9px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+.reacoes button:hover {
+    background-color: #e8e8e8;
+
+    transform: translateY(-1px);
+}
+
+.reacoes button:active {
+    transform: translateY(0);
+}
+
+
+/* ---------------------------
+   CONTADOR
+---------------------------- */
+
+.reacoes span {
+    margin-left: 3px;
+}
+
+
+/* ---------------------------
+   RESPONSIVIDADE
+---------------------------- */
+
+/* Tablets */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 550px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+
+        padding: 25px 15px;
+    }
+
+    .post {
+        min-height: auto;
+
+        padding: 25px 20px;
+    }
+
+}

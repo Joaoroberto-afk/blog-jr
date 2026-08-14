@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+
+    <main class="container">
+
+        <!-- POST 1 -->
+        <article class="post">
+
+            <img
+                src="cpn.jpg"
+                alt="Logo do blog"
+                class="post-img"
+            >
+
+            <h2>Meu primeiro post</h2>
+
+            <h3>Por: João Roberto</h3>
+
+            <p>
+                Boas-vindas ao meu novo blog! Aqui vou compartilhar
+                dicas de programação e curiosidades da área de tecnologia.
+            </p>
+
+            <div class="reacoes">
+                <button>
+                    ❤️ <span>0</span>
+                </button>
+
+                <button>
+                    👍 <span>0</span>
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- POST 2 -->
+        <article class="post">
+
+            <img
+                src="computação.jpg"
+                alt="Ilustração representando dados"
+                class="post-img"
+            >
+
+            <h2>A quantidade de dados no mundo é surreal</h2>
+
+            <h3>Por: João Roberto</h3>
+
+            <p>
+                Estima-se que 90% de todos os dados existentes no mundo
+                hoje foram gerados apenas nos últimos anos. Vivemos em
+                uma verdadeira explosão de informação que não para de acelerar.
+            </p>
+
+            <p class="fonte">
+                Fonte: Jornal Opção
+            </p>
+
+            <div class="reacoes">
+                <button>
+                    ❤️ <span>0</span>
+                </button>
+
+                <button>
+                    👍 <span>0</span>
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- POST 3 -->
+        <article class="post">
+
+            <img
+                src="mouse.jpeg"
+                alt="Ilustração de um mouse antigo"
+                class="post-img"
+            >
+
+            <h2>O primeiro mouse não era de plástico</h2>
+
+            <h3>Por: João Roberto</h3>
+
+            <p>
+                Antes do design ergonômico e das luzes RGB, o primeiro
+                mouse do mundo foi construído em madeira! Criado por
+                Douglas Engelbart em 1964, ele tinha o formato de uma
+                caixa quadrada e apenas um botão.
+            </p>
+
+            <p class="fonte">
+                Fonte: TecMundo
+            </p>
+
+            <div class="reacoes">
+                <button>
+                    ❤️ <span>0</span>
+                </button>
+
+                <button>
+                    👍 <span>0</span>
+                </button>
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <script>
+        const botoes = document.querySelectorAll(".reacoes button");
+
+        botoes.forEach(function(botao) {
+
+            botao.addEventListener("click", function() {
+
+                const contador = botao.querySelector("span");
+
+                contador.textContent =
+                    Number(contador.textContent) + 1;
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
